@@ -1,0 +1,157 @@
+.price {
+    padding: 55px 0 60px 0;
+    &_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .item {
+        max-width: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+        padding-bottom: 25px;
+        border: 1px solid #e9e9e9;
+        &_head {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #25333c;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &_img {
+            padding-top: 15px;
+            width: 60px;
+            height: 60px;
+        }
+        &_title {
+            padding-top: 15px;
+            font-size: 28px;
+            line-height: 1.3;
+            color: #ec644b;
+            text-align: center;
+            text-transform: uppercase;
+            span {
+                display: block;
+                font-size: 14px;
+                color: #2e2e2e;
+            }
+        }
+        &_descr {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.43;
+            text-align: center;
+            color: #2e2e2e;
+            padding: 20px 10px 25px 10px;
+        }
+    }
+    .consultation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &_title {
+            padding-top: 55px;
+            font-size: 28px;
+            color: #3a3a3a;
+        }
+        &_img-wrapper {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before {
+                content: "";
+                display: block;
+                width: calc(50% - 80px);
+                height: 1px;
+                background: #898989;
+                position: absolute;
+                right: 0;
+                top: 50%;
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: calc(50% - 80px);
+                height: 1px;
+                background: #898989;
+                position: absolute;
+                left: 0;
+                top: 50%;
+            }
+        }
+        &_img {
+            border: 1px solid #ec644b;
+            // position: absolute;
+            // top: 50%;
+            // right: 50%;
+            // transform: translateX(50%);
+        }
+        &_form {
+            padding-top: 20px;
+            width: 100%;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                height: calc(80% - 41px);
+                width: 1px;
+                background: #898989;
+                position: absolute;
+                right: 0;
+                top: 81px;
+            }
+            &::after {
+                content: "";
+                display: block;
+                height: calc(80% - 41px);
+                width: 1px;
+                background: #898989;
+                position: absolute;
+                left: 0;
+                top: 81px;
+            }
+        }
+        &_btn-wrapper {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before {
+                content: "";
+                display: block;
+                width: calc(50% - 100px);
+                height: 1px;
+                background: #898989;
+                position: absolute;
+                right: 0;
+                top: 50%;
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: calc(50% - 100px);
+                height: 1px;
+                background: #898989;
+                position: absolute;
+                left: 0;
+                top: 50%;
+            }
+        }
+        &_btn {
+            width: 180px;
+            height: 45px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.work {
+    padding: 50px 0 60px 0;
+    &_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 35px;
+    }
+    &_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &_img {
+        width: 360px;
+        height: 210px;
+    }
+    &_text {
+        padding-top: 30px;
+        line-height: 1.57;
+        font-size: 16px;
+        font-weight: 700;
+        color: #ec644b;
+        text-align: center;
+        max-width: 360px;
+        span {
+            padding-top: 10px;
+            display: block;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: justify;
+            color: #3a3a3a;
+        }
+    }
+}

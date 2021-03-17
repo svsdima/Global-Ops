@@ -1,6 +1,8 @@
 @import './base/libs';
 @import './base/fonts';
+@import './base/_global';
 @import './base/_btn';
+@import './base/_form';
 
 * {
     font-family: Roboto;
@@ -17,3 +19,8 @@ img {
 }
 
 @import './block/header';
+@import './block/_advantages';
+@import './block/work';
+@import './block/agent';
+@import './block/price';
+@import './block/managers';
