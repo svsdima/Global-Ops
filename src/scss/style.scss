@@ -1,0 +1,19 @@
+@import './base/libs';
+@import './base/fonts';
+@import './base/_btn';
+
+* {
+    font-family: Roboto;
+    color: #fff;
+}
+img {
+    display: inline-block;
+    width: 100%;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+@import './block/header';
