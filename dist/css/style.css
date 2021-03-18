@@ -3607,12 +3607,12 @@ template {
   border: 1px solid #fff;
   border-radius: 50%; }
 
-.phone {
+.phone-number {
   font-size: 19px;
   font-weight: 700;
   text-align: right;
   padding-right: 20px; }
-  .phone span {
+  .phone-number span {
     display: block;
     font-size: 14px;
     font-weight: 300;
@@ -3623,6 +3623,23 @@ template {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px; }
+
+.pageup {
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 1%;
+  z-index: 30;
+  cursor: pointer;
+  transition: .4s all ease;
+  border-radius: 100%;
+  background-color: #ec644b; }
+  .pageup:hover {
+    background-color: #a83926; }
+  .pageup:active {
+    background-color: #6d1e10; }
 
 .btn {
   width: 160px;
@@ -3648,21 +3665,52 @@ template {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 50px; }
+  padding-bottom: 40px; }
+
+.form_down {
+  width: 85%; }
 
 .form_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px 10px 0 0; }
+  .form_item.success input {
+    border-color: #2ecc71; }
+  .form_item.error input {
+    border-color: #e74c3c; }
+  .form_item.error small {
+    visibility: visible; }
   .form_item:last-child {
     padding-right: 0; }
+  .form_item small {
+    font-size: 15px;
+    padding-top: 10px;
+    color: #e74c3c;
+    visibility: hidden; }
 
-.form_input {
+.form_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+
+.form .username,
+.form .phone,
+.form .email {
   width: 250px;
   padding: 15px 30px;
   border-radius: 50px;
   border: solid 1px rgba(0, 0, 0, 0.21);
   font-size: 15px;
   font-weight: 300;
+  text-align: left;
   color: #000; }
+
+.form .btn {
+  border: none; }
 
 textarea.form__input {
   width: 95%;
@@ -3704,7 +3752,8 @@ img {
     .header .nav_link {
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      padding-left: 40px; }
     .header .nav_item {
       padding-right: 12px;
       list-style-type: none;
@@ -3915,7 +3964,8 @@ img {
   .price_wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: flex-start;
+    flex-wrap: wrap; }
   .price .item {
     max-width: 260px;
     display: flex;
@@ -4000,7 +4050,7 @@ img {
       .price .consultation_form::before {
         content: "";
         display: block;
-        height: calc(80% - 41px);
+        height: calc(80% - 38px);
         width: 1px;
         background: #898989;
         position: absolute;
@@ -4009,7 +4059,7 @@ img {
       .price .consultation_form::after {
         content: "";
         display: block;
-        height: calc(80% - 41px);
+        height: calc(80% - 38px);
         width: 1px;
         background: #898989;
         position: absolute;
@@ -4244,3 +4294,76 @@ img {
     .footer_maked-img {
       width: 30px;
       height: 30px; }
+
+@media (max-width: 1250px) {
+  .logo {
+    width: 80px;
+    height: 80px; }
+  .header .phone-number {
+    font-size: 17px; }
+  .header .nav {
+    padding-right: 10px; }
+  .header_title {
+    font-size: 68px; }
+    .header_title span {
+      font-size: 37px; } }
+
+@media (max-width: 1150px) {
+  .header .nav_link {
+    padding-left: 10px; }
+  .header_title {
+    font-size: 60px; }
+    .header_title span {
+      font-size: 33px; } }
+
+@media (max-width: 1000px) {
+  .header_title {
+    font-size: 52px; }
+    .header_title span {
+      font-size: 30px; } }
+
+@media (max-width: 900px) {
+  .menu {
+    flex-direction: column; }
+  .nav {
+    padding: 10px 0 20px 0; }
+  .phone-number {
+    padding: 0 0 20px 0; }
+    .phone-number span {
+      text-align: center; }
+  .header_subtitle {
+    padding-top: 30px; }
+  .header .list {
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .header .list_item {
+      max-width: 300px;
+      padding: 20px 0 0 0; }
+  .advantages_wrapper {
+    justify-content: center; }
+  .work_wrapper {
+    justify-content: center;
+    align-items: center; }
+  .work_item {
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center; }
+  .work_text {
+    max-width: 600px; }
+  .price_wrapper {
+    justify-content: space-around; }
+  .price .item {
+    max-width: 300px;
+    margin: 20px 0 0 0; }
+  .price .consultation_form:before {
+    height: calc(88% - 40px); }
+  .price .consultation_form:after {
+    height: calc(88% - 40px); }
+  .form_up {
+    flex-direction: column; }
+  .circuitry_wrapper {
+    justify-content: space-around; }
+  .circuitry_text {
+    max-width: 330px; }
+  .footer_title {
+    padding: 20px 0 20px 0; } }

@@ -8,10 +8,10 @@
     <title>Global Opt</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header_wrapper">
-                <div class="menu">
+                <div class="menu header-menu">
                     <div class="logo">
                         <a href="#">
                             <img src="img/logo.svg" alt="logo">
@@ -20,26 +20,26 @@
                     <nav class="menu_nav nav">
                         <ul class="nav_link">
                             <li class="nav_item">
-                                <a href="#">Преимущества</a>
+                                <a href="#advantages">Преимущества</a>
                             </li>
                             <li class="nav_item">
-                                <a href="#">Наша работа</a>
+                                <a href="#work">Наша работа</a>
                             </li>
                             <li class="nav_item">
-                                <a href="#">Цены</a>
+                                <a href="#price">Цены</a>
                             </li>
                             <li class="nav_item">
-                                <a href="#">Схема работы</a>
+                                <a href="#circuitry">Схема работы</a>
                             </li>
                             <li class="nav_item">
-                                <a href="#">Отзывы</a>
+                                <a href="#reviews">Отзывы</a>
                             </li>
                             <li class="nav_item">
-                                <a href="#">Контакты</a>
+                                <a href="#map">Контакты</a>
                             </li>
                         </ul>
                     </nav>
-                    <div class="phone">
+                    <div class="phone-number">
                         <span>Есть вопросы?</span>
                         +7 (926) 423 01 00
                     </div>
@@ -96,7 +96,7 @@
         </div>
     </header>
     
-    <section class="advantages">
+    <section class="advantages" id="advantages">
         <div class="container">
             <h2 class="title">Преимущества работы с GlobalOpt</h2>
             <div class="advantages_wrapper">
@@ -192,7 +192,7 @@
         </div>
     </section>
 
-    <section class="work">
+    <section class="work" id="work">
         <div class="container">
             <h2 class="title">Наша работа - больше чем просто доставка</h2>
             <div class="line"></div>
@@ -206,7 +206,7 @@
                     <div class="work_text">
                         Страховка груза
                         <span>
-                            Все грузы, логистику которых осуществляет Global Opt, застрахованы. Мы гарантируем полное возмещение стоимости груза в случаях, предусмотренных страхо- вым соглашением. Все ваши тревоги наша компания берет на себя.
+                            Все грузы, логистику которых осуществляет Global Opt, застрахованы. Мы гарантируем полное возмещение стоимости груза в случаях, предусмотренных страховым соглашением. Все ваши тревоги наша компания берет на себя.
                         </span>
                     </div>
                 </div>
@@ -252,7 +252,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section class="price" id="price">
         <div class="container">
             <h2 class="title">Цены на любой вариант доставки</h2>
             <div class="line"></div>
@@ -355,21 +355,24 @@
                     <form action="" class="form_body">
                         <div class="form_up">
                             <div class="form_item">
-                                <input type="text" name="name" id="full-name" placeholder="Ваше имя..." required="" class="form_input">
+                                <input type="text" class="username" id="username" placeholder="Ваше имя...">
+                                <small class="small">Ошибка</small>
                             </div>
                             <div class="form_item">
-                                <input type="text" name="name" id="full-name" placeholder="Ваш номер телефона..." required="" class="form_input">
+                                <input type="text" class="phone" id="phone" placeholder="Ваш номер телефона..." >
+                                <small class="small">Ошибка</small>
                             </div>
                             <div class="form_item">
-                                <input type="text" name="name" id="full-name" placeholder="Ваш e-mail..." required="" class="form_input">
+                                <input type="text" class="email" id="email" placeholder="Ваш e-mail...">
+                                <small class="small">Ошибка</small>
                             </div>
+                        </div>
+                        <div class="consultation_btn-wrapper">
+                            <button class="btn consultation_btn">
+                                Отправить заявку
+                            </button>
                         </div>
                     </form>
-                    <div class="consultation_btn-wrapper">
-                        <div class="btn consultation_btn">
-                            Отправить заявку
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -392,7 +395,7 @@
         </div>
     </section>
 
-    <section class="circuitry">
+    <section class="circuitry" id="circuitry">
         <div class="container">
             <h2 class="title">Схема работы с нами</h2>
             <div class="circuitry_wrapper">
@@ -477,7 +480,7 @@
         </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <div class="container">
             <h2 class="title">отзывы наших клиентов</h2>
             <div class="line"></div>
@@ -571,33 +574,36 @@
                     <form action="" class="form_body">
                         <div class="form_up">
                             <div class="form_item">
-                                <input type="text" name="name" id="full-name" placeholder="Ваше имя..." required="" class="form_input">
+                                <input type="text" class="username" id="username" placeholder="Ваше имя..." class="username">
+                                <small class="small">Ошибка</small>
                             </div>
                             <div class="form_item">
-                                <input type="text" name="name" id="full-name" placeholder="Ваш номер телефона..." required="" class="form_input">
+                                <input type="text" id="phone" placeholder="Ваш номер телефона..." class="phone ">
+                                <small class="small">Ошибка</small>
                             </div>
                             <div class="form_item">
-                                <input type="text" name="name" id="full-name" placeholder="Ваш e-mail..." required="" class="form_input">
+                                <input type="text" id="email" placeholder="Ваш e-mail..." class="email">
+                                <small class="small">Ошибка</small>
                             </div>
                         </div>
                         <div class="form_down">
                             <div class="form__item">
                                 <textarea rows="6" name="complaint" id="complaint" placeholder="Сообщение..." class="form__input"></textarea>
-                                <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission" class="form__input">
+                                <input type="hidden" name="_subject" id="email-subject" value="Complaint Form Submission" class="message">
                             </div>
                         </div>
-                    </form>
-                    <div class="questions_btn-wrapper">
-                        <div class="btn questions_btn">
-                            Отправить заявку
+                        <div class="questions_btn-wrapper">
+                            <button class="btn questions_btn">
+                                Отправить заявку
+                            </button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="map">
+    <section class="map" id="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1122.812634252341!2d37.62624603849193!3d55.74763969421112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54af8f4b2bb81%3A0x45d8b81f41916c35!2z0KHQsNC00L7QstC90LjRh9C10YHQutCw0Y8g0YPQuy4sIDUsINCc0L7RgdC60LLQsCwgMTE1MDM1!5e0!3m2!1sru!2sru!4v1616059504281!5m2!1sru!2sru" width="100%" height="500" style="border: none;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
@@ -611,7 +617,7 @@
                         </a>
                     </div>
                     <div class="footer_title">Global Opt - Доставка грузов из Китая в Россию и СНГ</div>
-                    <div class="phone">
+                    <div class="phone-number">
                         <span>Есть вопросы?</span>
                         +7 (926) 423 01 00
                     </div>
@@ -635,6 +641,10 @@
             </div>
         </div>
     </footer>
+
+    <a href="#header" class="pageup">
+        <img src="img/up-arrow.svg" alt="">
+    </a>
 
     <script src="js/script.js"></script>
 </body>

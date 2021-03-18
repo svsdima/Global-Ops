@@ -3,7 +3,8 @@
     &_wrapper {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
     }
     .item {
         max-width: 260px;
@@ -104,7 +105,7 @@
             &::before {
                 content: "";
                 display: block;
-                height: calc(80% - 41px);
+                height: calc(80% - 38px);
                 width: 1px;
                 background: #898989;
                 position: absolute;
@@ -114,7 +115,7 @@
             &::after {
                 content: "";
                 display: block;
-                height: calc(80% - 41px);
+                height: calc(80% - 38px);
                 width: 1px;
                 background: #898989;
                 position: absolute;

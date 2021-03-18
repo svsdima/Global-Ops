@@ -1,0 +1,128 @@
+@media (max-width: 1250px) {
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+    .header {
+        .phone-number {
+            font-size: 17px;
+        }
+        .nav {
+            padding-right: 10px;
+        }
+        &_title {
+            font-size: 68px;
+            span {
+                font-size: 37px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    .header {
+        .nav {
+            &_link {
+                padding-left: 10px;
+            }
+        }
+        &_title {
+            font-size: 60px;
+            span {
+                font-size: 33px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .header {
+        &_title {
+            font-size: 52px;
+            span {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .menu {
+        flex-direction: column;
+    }
+    .nav {
+        padding: 10px 0 20px 0;
+    }
+    .phone-number {
+        padding: 0 0 20px 0;
+        span {
+            // display: contents;
+            text-align: center;
+        }
+    }
+    .header {
+        &_subtitle {
+            padding-top: 30px;
+        }
+        .list {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            &_item {
+                max-width: 300px;
+                padding: 20px 0 0 0;
+            }
+        }
+    }
+    .advantages {
+        &_wrapper {
+            justify-content: center;
+        }
+    }
+    .work {
+        &_wrapper {
+            justify-content: center;
+            align-items: center;
+        }
+        &_item {
+            padding-top: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+        &_text {
+            max-width: 600px;
+        }
+    }
+    .price {
+        &_wrapper {
+            justify-content: space-around;
+        }
+        .item {
+            max-width: 300px;
+            margin: 20px 0 0 0;
+        }
+        .consultation_form {
+            &:before {
+                height: calc(88% - 40px);
+            }
+            &:after {
+                height: calc(88% - 40px);
+            }
+        }
+    }
+    .form_up {
+        flex-direction: column;
+    }
+    .circuitry {
+        &_wrapper {
+            justify-content: space-around;
+        }
+        &_text {
+            max-width: 330px;
+        }
+    }
+    .footer {
+        &_title {
+            padding: 20px 0 20px 0;
+        }
+    }
+}
