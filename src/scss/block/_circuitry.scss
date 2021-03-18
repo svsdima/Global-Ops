@@ -1,0 +1,39 @@
+.circuitry {
+    background-color: #f3f3f3;
+    padding: 60px 0 50px 0;
+    &_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 35px;
+    }
+    &_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 35px;
+    }
+    &_img {
+        width: 60px;
+        height: 60px;
+    }
+    &_text {
+        padding-top: 15px;
+        line-height: 1.57;
+        font-size: 16px;
+        font-weight: 700;
+        color: #ec644b;
+        text-align: center;
+        max-width: 260px;
+        span {
+            display: block;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: left;
+            color: #3a3a3a;
+        }
+    }
+
+}

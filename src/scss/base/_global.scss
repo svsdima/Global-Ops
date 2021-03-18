@@ -35,3 +35,22 @@
     border: 1px solid #fff;
     border-radius: 50%;
 }
+.phone {
+    font-size: 19px;
+    font-weight: 700;
+    text-align: right;
+    padding-right: 20px;
+    span {
+        display: block;  
+        font-size: 14px;
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+
+}

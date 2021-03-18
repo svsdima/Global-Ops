@@ -1,5 +1,5 @@
 .form {
-    &_body {
+    &_up {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -20,4 +20,15 @@
         font-weight: 300;
         color: #000;
     }
+}
+textarea.form__input {
+    width: 95%;
+    min-height: 70px;
+    resize: vertical;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 1px rgba(0, 0, 0, 0.21);
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
 }

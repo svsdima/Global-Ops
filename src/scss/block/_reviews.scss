@@ -1,0 +1,89 @@
+.reviews {
+    padding: 50px 0 65px 0;
+    position: relative;
+    min-height: 400px;
+    &_wrapper {
+        // display: flex;
+        position: relative;
+        
+    }
+    &_img {
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    &_item {
+        padding-top: 30px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
+        overflow: hidden;
+        transition: all 300ms ease-in-out;
+        z-index: -1;
+        opacity: 0;
+    }
+    &_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &_text {
+        padding-top: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        color: #000;
+        span {
+            padding-top: 10px;
+            display: block;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.57;
+            text-align: justify;
+            color: #3a3a3a;
+        }
+    }
+    .active {
+        opacity: 1;
+        z-index: 99;
+    }
+    .prev {
+        z-index: 2;
+        opacity: 0.25;
+        transform: translateX(-150%) scale(0.7);
+      }
+      
+    .next {
+        z-index: 2;
+        opacity: 0.25;
+        transform: translateX(50%) scale(0.7);
+      }
+      &-btn {
+          width: 50px;
+          position: absolute;
+          top: 0;
+          z-index: -99;
+          cursor: pointer;
+          &:nth-child(1) {
+            float: left;
+            right: 40%;
+            transform: translateX(40%);
+          }          
+          &:nth-child(2) {
+            float: right;
+          }
+      }
+
+}
+.button-container {
+    position: absolute;
+    top: 60px;
+    left: 60%;
+    transform: translate(-60%);
+    width: 425px;
+    z-index: 100;
+  }

@@ -90,10 +90,70 @@
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
 
+document.addEventListener('DOMContentLoaded', () => {
+  Object(_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
+});
+
+/***/ }),
+
+/***/ "./src/js/slider.js":
+/*!**************************!*\
+  !*** ./src/js/slider.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const slider = () => {
+  const slider = document.querySelector(".reviews_wrapper");
+  const slides = document.querySelectorAll(".reviews_item");
+  const button = document.querySelectorAll(".reviews-btn");
+  let current = 0;
+  let prev = 4;
+  let next = 1;
+
+  for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
+  }
+
+  const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+
+  const gotoNext = () => current < 4 ? gotoNum(current + 1) : gotoNum(0);
+
+  const gotoNum = number => {
+    current = number;
+    prev = current - 1;
+    next = current + 1;
+
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("active");
+      slides[i].classList.remove("prev");
+      slides[i].classList.remove("next");
+    }
+
+    if (next == 5) {
+      next = 0;
+    }
+
+    if (prev == -1) {
+      prev = 4;
+    }
+
+    slides[current].classList.add("active");
+    slides[prev].classList.add("prev");
+    slides[next].classList.add("next");
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (slider);
 
 /***/ })
 

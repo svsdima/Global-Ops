@@ -8,6 +8,9 @@
     font-family: Roboto;
     color: #fff;
 }
+body {
+    overflow-x: hidden;
+}
 img {
     display: inline-block;
     width: 100%;
@@ -24,3 +27,7 @@ img {
 @import './block/agent';
 @import './block/price';
 @import './block/managers';
+@import './block/circuitry';
+@import './block/reviews';
+@import './block/questions';
+@import './block/footer';
