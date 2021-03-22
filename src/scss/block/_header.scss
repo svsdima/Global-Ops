@@ -1,11 +1,11 @@
 .header {
     background: url('../img/main_bg.jpg') center (center / cover) no-repeat;
-    padding: 25px 0 85px 0;
     &_wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 75px 0 85px 0;
     }
     .nav {
         padding-right: 40px;
@@ -19,7 +19,7 @@
             padding-right: 12px;
             list-style-type: none;
             transition: all .3s ease;
-            &::after {
+            &:after {
                 content: "";
                 height: 100%;
                 width: 1px;
@@ -28,7 +28,7 @@
                 opacity: 0.4;
             }
             &:last-child {
-                &::after {
+                &:after {
                     content: none;
                 }
             }
@@ -37,6 +37,7 @@
                 font-size: 15px;
                 text-align: left;
                 position: relative;
+                transition: all 0.3s;
                 &:before {
                     content: "";
                     width: 0;
@@ -60,6 +61,7 @@
         }
     }
     &_subtitle {
+        display: block;
         font-size: 24px;
         font-weight: 300;
         text-align: center;

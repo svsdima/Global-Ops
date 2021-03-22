@@ -3641,6 +3641,53 @@ template {
   .pageup:active {
     background-color: #6d1e10; }
 
+.burger {
+  display: none;
+  position: fixed;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  margin: 0;
+  background-color: #c7523d;
+  z-index: 5;
+  transition: all 0.3s ease; }
+  .burger.active .burger_item span {
+    display: none; }
+  .burger.active .burger_item:before {
+    top: 50%;
+    transform: translateY(-50%) rotate(-135deg); }
+  .burger.active .burger_item:after {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg); }
+  .burger_item {
+    z-index: 10;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 20px; }
+    .burger_item span, .burger_item:before, .burger_item:after {
+      position: absolute;
+      left: 0;
+      height: 10%;
+      width: 100%;
+      transition: all 0.3s ease;
+      background-color: #fff; }
+    .burger_item:before, .burger_item:after {
+      content: ""; }
+    .burger_item:before {
+      top: 0; }
+    .burger_item:after {
+      bottom: 0; }
+    .burger_item span {
+      top: 50%;
+      transform: translateY(-50%); }
+
+.phone {
+  display: flex;
+  align-items: center; }
+
 .btn {
   width: 160px;
   height: 45px;
@@ -3740,13 +3787,13 @@ img {
   width: 95%; }
 
 .header {
-  background: url("../img/main_bg.jpg") center center/cover no-repeat;
-  padding: 25px 0 85px 0; }
+  background: url("../img/main_bg.jpg") center center/cover no-repeat; }
   .header_wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding: 75px 0 85px 0; }
   .header .nav {
     padding-right: 40px; }
     .header .nav_link {
@@ -3758,20 +3805,21 @@ img {
       padding-right: 12px;
       list-style-type: none;
       transition: all .3s ease; }
-      .header .nav_item::after {
+      .header .nav_item:after {
         content: "";
         height: 100%;
         width: 1px;
         padding-left: 15px;
         border-right: 1px dotted #fff;
         opacity: 0.4; }
-      .header .nav_item:last-child::after {
+      .header .nav_item:last-child:after {
         content: none; }
       .header .nav_item a {
         text-decoration: none;
         font-size: 15px;
         text-align: left;
-        position: relative; }
+        position: relative;
+        transition: all 0.3s; }
         .header .nav_item a:before {
           content: "";
           width: 0;
@@ -3788,6 +3836,7 @@ img {
             left: 0;
             background: #ec644b; }
   .header_subtitle {
+    display: block;
     font-size: 24px;
     font-weight: 300;
     text-align: center;
@@ -4189,7 +4238,7 @@ img {
       color: #3a3a3a; }
   .reviews .active {
     opacity: 1;
-    z-index: 99; }
+    z-index: 3; }
   .reviews .prev {
     z-index: 2;
     opacity: 0.25;
@@ -4199,25 +4248,23 @@ img {
     opacity: 0.25;
     transform: translateX(50%) scale(0.7); }
   .reviews-btn {
-    width: 50px;
+    width: 20px;
     position: absolute;
     top: 0;
-    z-index: -99;
+    z-index: 3;
     cursor: pointer; }
     .reviews-btn:nth-child(1) {
-      float: left;
-      right: 40%;
-      transform: translateX(40%); }
+      right: 90px; }
     .reviews-btn:nth-child(2) {
-      float: right; }
+      left: 90px; }
 
 .button-container {
   position: absolute;
   top: 60px;
-  left: 60%;
-  transform: translate(-60%);
+  left: 50%;
+  transform: translate(-50%);
   width: 425px;
-  z-index: 100; }
+  z-index: 3; }
 
 .questions {
   padding: 60px 0 80px 0;
@@ -4316,29 +4363,63 @@ img {
     .header_title span {
       font-size: 33px; } }
 
-@media (max-width: 1000px) {
-  .header_title {
-    font-size: 52px; }
-    .header_title span {
-      font-size: 30px; } }
+@media (max-width: 1120px) {
+  .header .nav_item {
+    padding-right: 6px; }
+    .header .nav_item:after {
+      padding-left: 6px; }
+  .phone-number {
+    font-size: 15px; } }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .burger {
+    display: flex; }
   .menu {
     flex-direction: column; }
-  .nav {
-    padding: 10px 0 20px 0; }
-  .phone-number {
-    padding: 0 0 20px 0; }
-    .phone-number span {
-      text-align: center; }
+  .phone {
+    padding: 25px 0; }
+    .phone-number {
+      font-size: 20px; }
+      .phone-number span {
+        font-size: 16px; }
+  .logo {
+    width: 120px;
+    height: 120px; }
   .header_subtitle {
     padding-top: 30px; }
   .header .list {
     flex-wrap: wrap;
     justify-content: space-around; }
     .header .list_item {
-      max-width: 300px;
+      max-width: 330px;
       padding: 20px 0 0 0; }
+  .header .nav {
+    position: fixed;
+    left: 0;
+    top: 50px;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    z-index: 4;
+    transform: translateY(-100%);
+    transition: all 0.3s ease; }
+    .header .nav.active {
+      transform: translateY(0); }
+    .header .nav_link {
+      flex-direction: column; }
+    .header .nav_item {
+      padding: 0 0 50px 0; }
+      .header .nav_item:last-child {
+        padding: 0; }
+      .header .nav_item a {
+        font-size: 20px;
+        color: #000; }
+      .header .nav_item:after {
+        content: none; }
   .advantages_wrapper {
     justify-content: center; }
   .work_wrapper {
@@ -4353,7 +4434,7 @@ img {
   .price_wrapper {
     justify-content: space-around; }
   .price .item {
-    max-width: 300px;
+    max-width: 330px;
     margin: 20px 0 0 0; }
   .price .consultation_form:before {
     height: calc(88% - 40px); }
@@ -4364,6 +4445,102 @@ img {
   .circuitry_wrapper {
     justify-content: space-around; }
   .circuitry_text {
-    max-width: 330px; }
+    max-width: 360px; }
   .footer_title {
     padding: 20px 0 20px 0; } }
+
+@media (max-width: 1000px) {
+  .header_title {
+    font-size: 52px; }
+    .header_title span {
+      font-size: 30px; } }
+
+@media (max-width: 768px) {
+  .header_title {
+    font-size: 45px; }
+    .header_title span {
+      font-size: 25px; }
+  .header_subtitle {
+    display: none; }
+  .header .list_item {
+    max-width: 250px; }
+  .advantages_text {
+    max-width: 330px; }
+  .circuitry_text {
+    max-width: 300px; }
+  .reviews {
+    padding: 50px 0 110px 0; }
+    .reviews-btn {
+      border: 1px solid #ec644b;
+      padding: 5px; }
+  .agent_descr,
+  .managers_descr {
+    font-size: 16px; }
+  .title {
+    font-size: 23px; }
+  .subtitle {
+    font-size: 19px; }
+  .reviews_text {
+    max-width: 400px; } }
+
+@media (max-width: 550px) {
+  .price .consultation_title {
+    font-size: 22px; } }
+
+@media (max-width: 500px) {
+  .header_title {
+    font-size: 40px; }
+    .header_title span {
+      font-size: 20px; }
+  .reviews_text {
+    max-width: 350px; } }
+
+@media (max-width: 425px) {
+  .phone {
+    flex-direction: column; }
+    .phone-number {
+      padding: 20px 0;
+      text-align: left; }
+  .advantages_item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .advantages_text {
+    text-align: center;
+    line-height: 1.7;
+    padding: 10px 0; }
+    .advantages_text span {
+      text-align-last: left; }
+  .footer_maked {
+    display: none; }
+  .work_text {
+    max-width: 350px; }
+  .work_img {
+    width: 300px; }
+  .price .consultation_title {
+    font-size: 21px; }
+  .reviews_text {
+    max-width: 300px; }
+  .work_text {
+    max-width: 300px; } }
+
+@media (max-width: 375px) {
+  .form .username,
+  .form .phone,
+  .form .email {
+    width: 200px; }
+  textarea.form__input {
+    width: 85%; }
+  .reviews {
+    padding: 50px 0 250px 0; }
+    .reviews_text {
+      max-width: 250px; }
+  .agent_title,
+  .managers_title {
+    font-size: 25px; }
+  .work_img {
+    width: 250px; }
+  .work_text {
+    max-width: 250px; }
+  .advantages_text {
+    max-width: 250px; } }

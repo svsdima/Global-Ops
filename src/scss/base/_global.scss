@@ -75,3 +75,66 @@
 		background-color: #6d1e10;
 	}
 }
+.burger {
+    display: none;
+    position: fixed;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 50px;
+    margin: 0;
+    background-color: #c7523d;
+    z-index: 5;
+    transition: all 0.3s ease;
+    &.active {
+        .burger_item {
+            span {
+            display: none;
+            }
+            &:before {
+                top: 50%;
+                transform: translateY(-50%) rotate(-135deg);
+            }
+            &:after {
+                bottom: 50%;
+                transform:translateY(50%) rotate(-45deg);
+            }
+        }
+    }
+    &_item {
+        z-index: 10;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        margin-left: 20px;
+        span, 
+        &:before, 
+        &:after {
+            position: absolute;
+            left: 0;
+            height: 10%;
+            width: 100%;
+            transition: all 0.3s ease;
+            background-color: #fff;
+        }
+        &:before,
+        &:after {
+            content: "";
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            bottom: 0;
+        }
+        span {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+.phone {
+    display: flex;
+    align-items: center;
+}

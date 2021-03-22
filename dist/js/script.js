@@ -86,6 +86,28 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/burger.js":
+/*!**************************!*\
+  !*** ./src/js/burger.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const burger = () => {
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.nav');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    menu.classList.toggle('active');
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (burger);
+
+/***/ }),
+
 /***/ "./src/js/form.js":
 /*!************************!*\
   !*** ./src/js/form.js ***!
@@ -178,6 +200,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
 /* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form */ "./src/js/form.js");
 /* harmony import */ var _scrolling__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scrolling */ "./src/js/scrolling.js");
+/* harmony import */ var _burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./burger */ "./src/js/burger.js");
+
 
 
 
@@ -185,6 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Object(_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_form__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_scrolling__WEBPACK_IMPORTED_MODULE_2__["default"])('.pageup');
+  Object(_burger__WEBPACK_IMPORTED_MODULE_3__["default"])();
 });
 
 /***/ }),
